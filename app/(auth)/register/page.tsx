@@ -39,7 +39,7 @@ const RegisterPage = () => {
         router.push("/login");
       }
     } catch (error) {
-      toast.error("An error occurred. Registration failed!");
+      toast.error("An error occurred. Registration failed!" + error);
     } finally {
       isPending(false);
     }

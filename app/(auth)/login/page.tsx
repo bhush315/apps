@@ -48,7 +48,7 @@ const LoginPage = () => {
         toast.error(data.error);
       }
     } catch (error) {
-      toast.error("An error occurred. Login failed!");
+      toast.error("An error occurred. Login failed!" + error);
     } finally {
       isPending(false);
     }

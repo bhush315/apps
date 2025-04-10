@@ -18,8 +18,6 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
   const [pending, isPending] = useState(false);
   const router = useRouter();
 
@@ -30,8 +28,6 @@ const LoginPage = () => {
 
   const loginHandler = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
-    setSuccess("");
     isPending(true);
 
     try {

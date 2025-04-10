@@ -28,6 +28,7 @@ export function verifyToken(
   try {
     return jwt.verify(token, JWT_SECRET) as { userId: number; role: string };
   } catch (error) {
+    console.log(error);
     return null;
   }
 }

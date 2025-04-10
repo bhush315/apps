@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { CgSpinner } from "react-icons/cg";
 import toast from "react-hot-toast";
 
@@ -11,8 +11,6 @@ const RegisterPage = () => {
     email: "",
     password: "",
   });
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
   const [pending, isPending] = useState(false);
   const router = useRouter();
 
@@ -23,8 +21,6 @@ const RegisterPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
-    setSuccess("");
     isPending(true);
 
     try {

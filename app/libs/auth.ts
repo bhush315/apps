@@ -51,6 +51,7 @@ export async function getCurrentUser() {
       name: true,
       role: true,
       createdAt: true,
+      password: true,
     },
   });
 
